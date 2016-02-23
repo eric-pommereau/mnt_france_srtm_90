@@ -1,3 +1,5 @@
+-- Récupérer les rasters SRTM sur http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp
+
 -- Calculer les BBOX de la France (métropole, DOM et COM)
 
 SELECT 'Métropole' AS territoire, '' AS dept, ST_Extent(geom)::text as bbox FROM communes_201507_4326_10m WHERE char_length(dpt) < 3 UNION
@@ -23,5 +25,4 @@ ORDER BY dept
 "Martinique";"BOX(-61.2290349033092 14.3886458772931,-60.8096831852153 14.8787232413145)"
 "Mayotte";"BOX(163.569695640276 -22.7114986968281,168.133657575038 -19.5250885246127)"
 "Mayotte";"BOX(45.0183408427421 -13.0054169866475,45.2999850886235 -12.6365901636169)"
-
 */
