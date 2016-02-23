@@ -23,7 +23,7 @@ psql -U srtm -p 5434
 Détails de l'installation : [bootstrap.sh](./vagrant-provision/bootstrap.sh)
 
 ## Résultat
-
+### BDD
 Tuiles pré-chargées -> bretagne et corse :
 ```sql
 WITH point AS ( 
@@ -41,6 +41,9 @@ FROM point JOIN srtm_metro srtm ON st_intersects(srtm.rast, point.geom);
 ==> default:  Corse (Capu Ucellu)  |     2238 | (900,1651039,1834.48777777778,243.648136243768,1341,2500)
 ==> default: (2 rows)
 ```
+### Dans QGIS, visualisation du MNT
+
+![Image of Yaktocat](./images/corse-mnt-qgis.png)
 
 
 
